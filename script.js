@@ -2,7 +2,7 @@
 
 function  promis() {
 
-return new Promis ((resolve)=>{
+return new Promise((resolve)=>{
 	setTimeout(()=>{
 		resolve("Hello, world!");
 	},1000)
