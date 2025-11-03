@@ -1,14 +1,16 @@
 //your JS code here. If required.
 
-function  promis(str) {
-let op = document.getElementById("output");
+function  promis() {
+
 return new Promis ((resolve)=>{
 	setTimeout(()=>{
-		
-		op.innerHTML =`<p>${str}</p>`;
 		resolve("Hello, world!");
 	},1000)
 })	
 }
-promis("Hello, world!");
+promis().
+	then((data)=>{
+		let op = document.getElementById("output");
+		op.textContent=data;
+	})
 
